@@ -114,12 +114,13 @@ public class ClientGUI {
 					username = txtUsername.getText();
 					txtUsername.setEditable(false);
 					try {
-						ServerConnection.Connect(address, port);
+						ServerConnection Cnx = new ServerConnection();
+						Cnx.Connect(address, port);
 						InputStreamReader streamreader = new InputStreamReader(
-								ServerConnection.sockToServer.getInputStream());
+								Cnx.sockToServer.getInputStream());
 						reader = new BufferedReader(streamreader);
 						clientWriter = new PrintWriter(
-								ServerConnection.sockToServer.getOutputStream());
+								Cnx.sockToServer.getOutputStream());
 						clientWriter.println(username
 								+ ":has connected.:Connect"); // Displays to
 																// everyone that
@@ -153,7 +154,8 @@ public class ClientGUI {
 					txtUsername.setEditable(true);
 					try {
 						textArea.append("Disconnected \n");
-						ServerConnection.Disconnect();
+						ServerConnection Cnx = new ServerConnection();
+						Cnx.Disconnect();
 					} catch (Exception ex) {
 						textArea.append("Could not disconnect. \n");
 					}

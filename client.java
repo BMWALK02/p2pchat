@@ -5,8 +5,8 @@ import java.net.*;
 
 public class Client {
 	
-	public static String sentence;
-	public static String modifiedSentence;
+	private static String sentence;
+	private static String modifiedSentence;
 	private static void main(String[] args) throws Exception {
 		String sentence;
 		String modifiedSentence;

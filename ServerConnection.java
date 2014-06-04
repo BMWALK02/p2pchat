@@ -5,32 +5,24 @@ import java.net.Socket;
 
 public class ServerConnection {
 
-	static Socket sockToServer;
-	static int port;
-	static InetAddress address;
+	Socket sockToServer;
+	int port;
+	InetAddress address;
 	
-	public static void main(String[] args) throws IOException {
+
 		
 		
-	Disconnect();{
+	void Disconnect() throws IOException{
 		sockToServer.close();
 		}
 		
-	Connect(address, port);{
+	 void Connect(InetAddress address, int port) throws IOException{
 		sockToServer = new Socket (address, port);
 		sockToServer.getOutputStream();	
 		}
 
-	}
-
-	static void Disconnect() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	static void Connect(InetAddress address2, int port2) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }
+
+	

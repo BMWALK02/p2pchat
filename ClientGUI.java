@@ -90,7 +90,7 @@ public class ClientGUI {
 		frame.getContentPane().add(listOnlineUsers);
 
 		JLabel lblOnlineUsers = new JLabel("Online Users");
-		lblOnlineUsers.setBounds(346, 14, 65, 14);
+		lblOnlineUsers.setBounds(346, 14, 88, 14);
 		frame.getContentPane().add(lblOnlineUsers);
 
 		final TextArea textArea = new TextArea();
@@ -169,4 +169,3 @@ public class ClientGUI {
 		frame.getContentPane().add(btnDisconect);
 	}
 }
-
